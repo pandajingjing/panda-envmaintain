@@ -1,0 +1,15 @@
+#zendstudio
+.buildpath
+.project
+/.settings
+#mac
+.DS_Store
+#*nux
+*.swp
+#code
+/config/
+#self
+/tar
+/temp
+/version
+wget-log

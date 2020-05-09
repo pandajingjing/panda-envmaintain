@@ -1,0 +1,15 @@
+-   hosts: "{{ sDeployServer }}"
+    remote_user: "{{ sDeployUser }}"
+    tasks:
+    -   name: Find file glob
+        find:
+            paths: "{{ sDeleteRootDir }}"
+            file_type: directory
+            patterns: "{{ sDeletePattern }}"
+            recurse: true
+        register: files_to_delete
+    -   name: Delete file glob
+        file:
+            path: "{{ item.path }}"
+            state: absent
+        with_items: "{{ files_to_delete.files }}"

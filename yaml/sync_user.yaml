@@ -1,0 +1,10 @@
+-   hosts: "{{ sDeployServer }}"
+    remote_user: "{{ sDeployUser }}"
+    tasks:
+    -   name: xx user
+        user:
+            append: no
+            group: {{ sDeployGroup }}
+            name: {{ sNewUser }}
+            create_home: yes
+            password_lock: no

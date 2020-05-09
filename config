@@ -1,0 +1,27 @@
+#env user and group
+sDeployUser='deployer'
+sDeployGroup='app'
+sDeployServer='online_servers'
+
+#frame configuration
+iDebug=0
+
+#dir we put all stuff
+sFixDataInstallDir='/fix-data'
+sDynamicDataInstallDir='/dynamic-data'
+sLogInstallRootDir=$sDynamicDataInstallDir'/log'
+sAppRootDir=$sFixDataInstallDir'/app'
+sBinRootDir=$sFixDataInstallDir'/bin/'
+
+#dir we balabala all we need, do not modify these unless you exactly know what it means
+sExecAnsiblePlaybook='/usr/bin/ansible-playbook'
+
+sExecTarDir=$sExecRootDir'/tar'
+sExecTempDir=$sExecRootDir'/temp'
+sExecRepoRootDir=$sExecRootDir'/repo'
+sExecVersionDir=$sExecRootDir'/version'
+sExecGit='/usr/bin/git'
+
+sExecRemotePhp='/fix-data/bin/php-7.0.25/bin/php'
+sExecLocalPhp='/usr/bin/php7.0'
+sExecLocalNpm='/usr/bin/npm'
